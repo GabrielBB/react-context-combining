@@ -1,25 +1,35 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-class App extends Component {
+import { Provider } from './context';
+import BrowserInfo from './components/BrowserInfo'
+import UserInfo from './components/UserInfo'
+
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      user: 'Gabriel Basilio Brito',
+      color: 'red',
+      browser: { owner: 'Google', name: 'Chrome' }
+    }
+  }
+
+  toggleColor = () => {
+    let color = this.state.color === 'red' ? 'black' : 'red';
+    this.setState({ color })
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Provider {...this.state}>
+          <button onClick={this.toggleColor}>Toggle Font Color</button>
+          <UserInfo />
+          <BrowserInfo />
+        </Provider>
       </div>
     );
   }
