@@ -26,9 +26,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Provider {...this.state}>
-          <button onClick={this.toggleColor}>Toggle Font Color</button>
           <UserInfo />
           <BrowserInfo />
+          <button onClick={this.toggleColor}>Toggle Font Color</button>
         </Provider>
       </div>
     );
