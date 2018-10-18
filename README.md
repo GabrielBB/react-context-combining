@@ -1,6 +1,6 @@
 ## React Context Combining Example
 
-You can create a ```context.js```. This is the js file components will be importing to use consume contexts. In this case we have 3 contexts:
+You can create a ```context.js```. In this case we have 3 contexts:
 
 * UserContext: holds a string with the logged user name
 * ColorContext: holds a string with the app font color
