@@ -119,6 +119,6 @@ export default UserInfo;
 
 ### App Screenshots:
 
-[[https://github.com/username/repository/blob/master/img/octocat.png|alt=octocat]]
+![Black Font](https://github.com/GabrielBB/react-context-combining/blob/master/images/black_font.JPG)
 
-[[https://github.com/username/repository/blob/master/img/octocat.png|alt=octocat]]
+![Red Font](https://github.com/GabrielBB/react-context-combining/blob/master/images/red_font.JPG)
